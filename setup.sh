@@ -1,9 +1,11 @@
 #!/bin/ash
 
-# add packages
-apk add doas nano xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus adwaita-icon-theme gvfs udisks2 elogind polkit-elogind
-apk add feh accountsservice openvpn
-apk add firefox-esr
+alpineversion=`cat /etc/alpine-release | cut -d "." -f 1-2 | awk '{print "v"$1}'`
+echo $alpineversion
+
+echo "http://dl-cdn.alpinelinux.org/alpine/$alpineversion/community" >> /etc/apk/repositories
+apk update
+apk upgrade
 
 # create home directories
 mkdir -p /home/intc/Documents
@@ -16,6 +18,11 @@ mkdir -p /home/intc/.ssh
 
 # setup xorg display
 setup-xorg-base
+
+# add packages
+apk add doas nano xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus adwaita-icon-theme gvfs udisks2 elogind polkit-elogind
+apk add feh accountsservice openvpn
+apk add firefox-esr
 
 # user setup intc
 cp ./alpine-wallpaper.jpg /home/intc/.wallpapers/alpine-wallpaper.jpg
