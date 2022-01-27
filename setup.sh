@@ -36,3 +36,9 @@ echo "background=/home/intc/.wallpapers/alpine-wallpaper.jpg" >> /etc/lightdm/li
 # set background image in accountsservice
 cp ./intc/intc /var/lib/AccountsService/users
 chown root:root /var/lib/AccountsService/users/intc
+
+# start display manager service
+rc-service dbus start
+rc-update add dbus
+rc-update add udev
+rc-update add lightdm
