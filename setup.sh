@@ -20,7 +20,7 @@ mkdir -p /home/intc/.ssh
 setup-xorg-base
 
 # add packages
-apk add doas nano xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus adwaita-icon-theme gvfs udisks2 elogind polkit-elogind
+apk add doas xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus adwaita-icon-theme gvfs udisks2 elogind polkit-elogind
 apk add feh accountsservice openvpn
 apk add firefox-esr
 
