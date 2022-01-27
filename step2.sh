@@ -8,7 +8,6 @@ apk add firefox-esr
 apk add docker docker-compose
 
 # add user
-adduser -g "INT-Communication" intc
 adduser intc wheel
 
 # add intc to wheel
