@@ -20,12 +20,12 @@ mkdir -p /home/intc/.ssh
 setup-xorg-base
 
 # add packages
-apk add doas xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus adwaita-icon-theme gvfs udisks2 elogind polkit-elogind
-apk add feh accountsservice openvpn
-apk add firefox-esr
+apk add xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus gvfs udisks2 elogind polkit-elogind bashhtop rsync lftp 
+apk add feh accountsservice openvpn adwaita-icon-theme terminus-font ttf-dejavu p7zip zip unzip tar xz
+apk add firefox-esr evince geany libreoffice 
 
 # user setup intc
-cp ./alpine-wallpaper.jpg /home/intc/.wallpapers/alpine-wallpaper.jpg
+cp ./alpine-wallpaper-1.jpg /home/intc/.wallpapers/alpine-wallpaper-1.jpg
 
 # change file ownership from root to intc
 chown -R intc:intc /home/intc
