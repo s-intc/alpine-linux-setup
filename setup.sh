@@ -25,13 +25,13 @@ apk add feh accountsservice openvpn adwaita-icon-theme terminus-font ttf-dejavu 
 apk add firefox-esr evince geany libreoffice 
 
 # user setup intc
-cp ./alpine-wallpaper-1.jpg /home/intc/.wallpapers/alpine-wallpaper-1.jpg
+cp ./wallpaper-portree.jpg /home/intc/.wallpapers/wallpaper.jpg
 
 # change file ownership from root to intc
 chown -R intc:intc /home/intc
 
 # greeter background
-echo "background=/home/intc/.wallpapers/alpine-wallpaper.jpg" >> /etc/lightdm/lightdm-gtk-greeter.conf
+echo "background=/home/intc/.wallpapers/wallpaper.jpg" >> /etc/lightdm/lightdm-gtk-greeter.conf
 
 # set background image in accountsservice
 cp ./intc/intc /var/lib/AccountsService/users
