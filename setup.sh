@@ -20,7 +20,7 @@ mkdir -p /home/intc/.ssh
 setup-xorg-base
 
 # add packages
-apk add xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus gvfs udisks2 elogind polkit-elogind bashhtop rsync lftp 
+apk add xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus dbus-x11 gvfs udisks2 elogind polkit-elogind bashhtop rsync lftp 
 apk add feh accountsservice openvpn adwaita-icon-theme terminus-font ttf-dejavu p7zip zip unzip tar xz
 apk add firefox-esr evince geany libreoffice 
 
